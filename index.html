@@ -12,24 +12,26 @@
 </head>
 
 <body>
+  <section class="section">
+    <div class="container container-buttons">
+        <button class="button button--primary" data-category="eat"><i class="fas fa-utensils"></i></button>
+        <button class="button button--primary" data-category="drink"><i class="fas fa-cocktail"></i></button>
+        <button class="button button--primary" data-category="see"><i class="fas fa-binoculars"></i></button>
+        <button class="button button--primary" data-category="shop"><i class="fas fa-shopping-cart"></i></button>
+        <button class="button button--primary" data-category="explore"><i class="fas fa-city"></i></button>
+      </div>
+  </section>
 
-  <div class="button-container buttons-category">
-    <button class="button button--primary" data-category="food"><i class="fas fa-utensils"></i>Food</button>
-    <button class="button button--primary" data-category="drink"><i class="fas fa-cocktail"></i>Drink</button>
-    <button class="button button--primary" data-category="see"><i class="fas fa-binoculars"></i>See</button>
-    <button class="button button--primary" data-category="shop"><i class="fas fa-shopping-cart"></i>Shop</button>
-    <button class="button button--primary" data-category="explore"><i class="fas fa-city"></i>Explore</button>
-    <button class="button button--primary" data-category="sights">Sights</button>
-  </div>
+  
 
-  <div class="button-container buttons-neighborhood">
+  <!-- <div class="button-container buttons-neighborhood">
     <button class="button button--primary" data-neighborhood="chelsea">Chelsea</button>
     <button class="button button--primary" data-neighborhood="midtown">Midtown</button>
     <button class="button button--primary" data-neighborhood="union square">Union Square</button>
     <button class="button button--primary" data-neighborhood="times square">Times Square</button>
-  </div>
+  </div> -->
 
-  <div class="filter-container">
+  <!-- <div class="filter-container">
     <div class="button-container button-category">
       <button class="button button--primary" data-category="price">price</button>
       <button class="button button--primary" data-category="speed">speed</button>
@@ -40,10 +42,14 @@
       <button class="button button--primary" data-type="laptop">Laptops</button>
       <button class="button button--primary" data-type="mobile">Mobile</button>
     </div>
-  </div>
+  </div> -->
 
   </div>
-  <div class="activity-grid"></div>
+  <section class="section">
+    <div class="container container-grid">
+      <ul class="activity-grid"></ul>
+    </div>
+  </section>
 
   <script type="text/javascript" src="./assets/js/index.js"></script>
 </body>

@@ -5,20 +5,13 @@
 @import "../utilities/variables";
 
 .button {
-  width: 100px;
-  height: 50px;
-  transition: all 200ms ease;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  font-weight: 700;
   display: flex;
-  margin: 0 10px;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   cursor: pointer;
-  border-width: 2px;
-  border-style: solid;
-  position: relative;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  transition: all 200ms ease;
 
   &:hover,
   &:active,
@@ -28,34 +21,7 @@
   }
 }
 
-.button span {
-  display: block;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  background-color: darken($color: $color-primary, $amount: 40%);
-  transition: all 0.4s;
-}
-
-.button:hover::before {
-  opacity: 1;
-  width: 100%;
-}
-
 .button--primary {
-  border-color: $color-white;
-
   &:hover,
   &:active,
   &:focus {
@@ -68,7 +34,6 @@
 .button--secondary {
   background-color: $color-primary;
   color: $color-white;
-  border-color: $color-primary;
   outline: none;
 
   &:hover,

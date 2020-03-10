@@ -2,7 +2,6 @@
 
 @import "../utilities/variables";
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,31 +19,125 @@ h1 {
   justify-content: center;
 }
 
-ul {
+.activity-grid {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
 }
 
-ul::after {
-  width: 20%;
-      
-  // @media (min-width: 551px) {
-  //   width: 20%;
-  // }
+.activity-grid::after {
+  content: "";
+  width: 100%;
+
+  @media (min-width: 551px) {
+    width: calc(33.33%);
+  }
+  @media (min-width: 801px) {
+    width: calc(25%);
+  }
 }
 
 li {
-  margin: 20px;
+  list-style: none;
   padding: 10px 5px;
-  width: 20%;
+  width: 50%;
   border: 2px solid #eee;
   color: #eee;
   justify-content: center;
+  transition: transform 0.4s ease;
+
+  @media (min-width: 551px) {
+    width: calc(33.33%);
+  }
+  @media (min-width: 801px) {
+    width: calc(25%);
+  }
 }
 
 li.selected {
   display: flex;
   border-color: #999;
   color: #999;
+}
+
+.activity-name {
+  min-height: 65px;
+  line-height: 1.4rem;
+}
+
+.activity-map {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fas {
+  color: $color-fontawesome;
+}
+
+.fas.fa-map-marker-alt {
+  color: #900;
+}
+
+.activity-grid {
+  [data-category="shop"] {
+    background-color: #50514f;
   }
+  [data-category="coffee"] {
+    background-color: #f25f5c;
+  }
+  [data-category="eat"] {
+    background-color: #247ba0;
+  }
+  [data-category="relax"] {
+    background-color: #70c1b3;
+  }
+  [data-category="see"] {
+    background-color: #70c1b3;
+  }
+  [data-category="explore"] {
+    background-color: #ffe066;
+  }
+  [data-category="drink"] {
+    background-color: #b744b8;
+  }
+}
+
+.container-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &:after {
+    content: "";
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container-buttons .button {
+  margin: 0 10px;
+}
+
+.button i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+}
+
+.button:hover i {
+  color: #fff;
+}
+
+.button:hover::before {
+  opacity: 1;
+  width: 100%;
+}
