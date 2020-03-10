@@ -1,0 +1,50 @@
+// FEATURED CONTENT
+
+@import "../utilities/variables";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif, arial, helvetica;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+ul::after {
+  width: 20%;
+      
+  // @media (min-width: 551px) {
+  //   width: 20%;
+  // }
+}
+
+li {
+  margin: 20px;
+  padding: 10px 5px;
+  width: 20%;
+  border: 2px solid #eee;
+  color: #eee;
+  justify-content: center;
+}
+
+li.selected {
+  display: flex;
+  border-color: #999;
+  color: #999;
+  }
