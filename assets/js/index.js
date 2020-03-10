@@ -7,7 +7,7 @@ const restaurants = [
     name: "Dan's Hamburgers",
     price: 'Cheap',
     cuisine: 'Burger',
-    directions: 'https://www.google.com/maps/dir/?api=1&dir=City+Hall%2C+New+York%2C+NY'
+    directions: 'https://goo.gl/maps/1UwLnGjCFDkTnrsEA'
   },
   {
     name: "Austin's Pizza",
